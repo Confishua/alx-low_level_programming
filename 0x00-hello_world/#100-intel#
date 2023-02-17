@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <unistd.h>
+
+/**
+* main - prints exactly and that piece of art
+*
+* Return: Always 0
+**/
+int main(voi)
+gcc -S $CFILE -o $CFILE.s
