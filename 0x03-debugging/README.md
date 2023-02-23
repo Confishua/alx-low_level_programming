@@ -1,0 +1,1 @@
+This project is all about debugging of code. To be able to debug a line of code, one must first understand the problem with the code. Debugging is the process of fixing erros in a code. This project will cover all that.
