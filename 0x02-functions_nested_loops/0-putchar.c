@@ -1,7 +1,7 @@
-#include "main.h"
+include "main.h"
 /**
 * main - print _putchar
-* Confidence learning processes 
+* Confidence learning processes
 * Return: 0
 */
 
