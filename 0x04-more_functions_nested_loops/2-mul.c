@@ -2,8 +2,8 @@
 
 /**
 * mul - multiply 2 int
-* a: first int
-* b: second int
+* a: first int (this is serves as the first integer)
+* b: second int (the second integer is her)
 * Return: addition of the multiplicattion
 */
 
