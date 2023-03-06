@@ -23,6 +23,6 @@ printf("\n");
 printf("Size of a long long int: %ld byte(s)", sizeof(d));
 printf("\n");
 printf("Size of a float: %d byte(s)", sizeof(f));
-printf("\n\r");
+printf("\n");
 return (0);
 }
