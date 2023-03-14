@@ -8,8 +8,8 @@
 
 int main(void)
 {
-int i = 2;
-int j = 20;
+int i;
+int j;
 int result;
 result = (i * j);
 printf("%d", result);
