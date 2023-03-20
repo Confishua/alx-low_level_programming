@@ -1,9 +1,10 @@
 #include <stdio.h>
-/*
-* main - A program that prints the name of the file it was compiled from
-*
-* Return: nothing
-*/
+
+/**
+ * main - a program that prints its name
+ *
+ * Return: nothing
+ */
 
 int main(void)
 {
