@@ -8,7 +8,7 @@
 void free_dog(dog_t *d)
 {
 if (d)
-printf("\n");
+
 {
 free(d->name);
 free(d->owner);
