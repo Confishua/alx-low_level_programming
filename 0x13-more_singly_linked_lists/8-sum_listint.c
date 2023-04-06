@@ -1,4 +1,5 @@
-#include "list.h"
+#include "lists.h"
+
 /**
 *sum-listint - returns the sum of values in a listint list
 *@head: first node in the linked list

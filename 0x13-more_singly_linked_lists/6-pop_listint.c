@@ -5,6 +5,7 @@
 *
 * Return: the value of the deleted elements or 0 if empty
 */
+
 int pop_listint(listint_t **head)
 {
 listint_t *temp;
