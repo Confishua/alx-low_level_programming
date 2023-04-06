@@ -28,9 +28,6 @@ else
 }
 free(*h);
 *h = NULL;
-}
-}
-*h = NULL;
 len++;
 break;
 }
