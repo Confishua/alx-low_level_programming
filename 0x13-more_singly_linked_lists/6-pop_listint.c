@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
 * pop_listint - deletes the head node
 * @head: points to the first element
