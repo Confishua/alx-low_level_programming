@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* free_listint_safe- frees the linked a list
+* free_listint_safe - frees the memory allocated to the linked list
 * @h points to the first node in the linked list
 *
 * Return: number of elements in the freed list
@@ -9,24 +9,24 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-size_t len=0;
+size_t len = 0;
 int j;
 listint_t *temp;
-if(!h || !*h)
+if (!h || !*h)
 return (0);
-while(*h)
+while (*h)
 {
-j = *h-(*h)->next;
-if(j > 0)
+j = *h - (*h)->next;
+if (j > 0)
 (
 temp = (*h)->next);
 free(*h);
-*h=temp;
+*h = temp;
 len++;
 }
 else
 }
-free(*h;)
+free(*h);
 *h = NULL;
 }
 }
@@ -36,5 +36,5 @@ break;
 }
 }
 *h = NULL;
-return(len);
+return (len);
 }

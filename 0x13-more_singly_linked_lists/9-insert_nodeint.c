@@ -2,7 +2,7 @@
 
 /**
 * insert_nodeint_at_index - insert a node at index position
-* 
+*
 * @head: points to the initial node in the list
 * @idx: index position of the  added node
 * @n: data to be insert into the new node

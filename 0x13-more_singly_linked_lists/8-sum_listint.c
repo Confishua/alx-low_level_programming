@@ -8,12 +8,12 @@
 */
 int sum_listint(listint_t *head)
 {
-int sum_of_values=0;
+int sum_of_values = 0;
 listint_t *temp = head;
-while(temp)
+while (temp)
 {
 sum_of_values += temp->n;
-temp=temp->next;
+temp = temp->next;
 }
 return (sum_of_values);
 }
