@@ -1,5 +1,5 @@
-#include "main.h"
-#include <string.h>
+#include <stdio.h>
+include <stdlib.h>
 /**
 * _print_rev_recursion - prints string in reverse format to stdou
 * @s: string to print
@@ -13,5 +13,5 @@ if (*s)
 _print_rev_recursion(s + 1);
 _putchar(*s);
 }
-_putchar('\n');
+
 }

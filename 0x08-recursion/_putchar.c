@@ -6,7 +6,7 @@
 * Return: Always 0 for success
 */
 
-int _putchar(*c)
+int _putchar( *c)
 {
 return(write(1, &c, 1));
 }
