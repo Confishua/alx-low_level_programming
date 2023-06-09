@@ -10,7 +10,6 @@
 
 int is_prime_number(int n)
 {
-n = scanf("%d", &n);
 if (n % n == 0)
 {
 return (1);
