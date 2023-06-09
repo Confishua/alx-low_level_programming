@@ -1,5 +1,5 @@
 #include "main.h"
-#include <math.h>
+
 
 /**
 *i_pow_recursion - returns the power of any given numbers
@@ -10,13 +10,13 @@
 
 int _pow_recursion(int x, int y)
 {
-if(y >x)
+if(y > x)
 {
-  return (-1);
+return (-1);
 }
- if (y == 0)
+ else
 {
-return (0)
-return _pow_recursion(x * (x, y-1));
+return (0);
+return _pow_recursion(x, y);
 }
 }

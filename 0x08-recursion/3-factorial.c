@@ -8,7 +8,6 @@
 
 int factorial(int n)
 {
-n = n * factorial(n - 1);
 if (n < 0)
 {
 return (-1);
@@ -16,7 +15,7 @@ return (-1);
 if (n >= 0)
 {
 return (1);
-return (n);
+return (n * factorial(n - 1);
 }
 _putchar('\n');
 }
