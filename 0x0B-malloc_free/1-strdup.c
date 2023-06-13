@@ -9,12 +9,13 @@
 char *_strdup(char *str)
 {
 char *newStr;
-newStr = malloc(sizeof(str) + 1);
+ 
+str = malloc(sizeof(newStr));
 
 if (str == NULL)
 {
 return (NULL);
 }
-free (newStr);
-return (0);
+ while (*str != '\0');
+ return (str);
 }
