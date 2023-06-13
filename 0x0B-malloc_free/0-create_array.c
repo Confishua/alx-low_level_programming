@@ -26,6 +26,5 @@ create[i] = c;
 i++;
 }
 create[i] = '\0';
-free(create);
 return (create);
 }
