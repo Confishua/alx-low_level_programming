@@ -6,25 +6,26 @@
 /**
 *create_array - a function that creates an array
 *@c: The char variable created
-*Return; Null for success or pointer for failure
+*@size: the memory space of the array
+*Return: Null for success or pointer for failure
 */
 
 char *create_array(unsigned int size, char c)
 {
 char *create;
 unsigned int i;
-create =malloc((size + 1) * sizeof(char));
+create = malloc((size) * sizeof(char));
 
 if (size == 0)
 {
-return NULL;
+return (NULL);
 }
 i = 0;
-while(i < size)
+while (i < size)
 {
 create[i] = c;
 i++;
 }
 create[i] = '\0';
-return create;
+return (create);
 }
