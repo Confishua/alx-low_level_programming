@@ -6,16 +6,17 @@
 * Return: NULL
 */
 
-char *_strdup(char *str)
-{
-char *newStr;
- 
-str = malloc(sizeof(newStr));
-
+unsigned int newStr, j;
+char *ptr;
 if (str == NULL)
-{
 return (NULL);
-}
- while (*str != '\0');
- return (str);
+for (newStr = 0; str[newStr] != '\0'; newStr++)
+                ;
+ptr = (char *)malloc((newStr + 1) * sizeof(char));
+if (ptr == NULL)
+return (NULL);
+for (j = 0; j < i; j++)
+ptr[j] = str[j];
+ptr[newStr + 1] = '\0';
+return (ptr);
 }

@@ -14,17 +14,14 @@ char *create_array(unsigned int size, char c)
 {
 char *create;
 unsigned int i;
-create = malloc(size * sizeof(char));
-if (size == 0)
+create = (char *) malloc(size * sizeof(char));
+if ((size == 0) || (ptr == NULL))
 {
 return (NULL);
 }
-i = 0;
-while (i < size)
+for (i = 0; i < size; i++)
 {
 create[i] = c;
-i++;
 }
-create[i] = '\0';
 return (create);
 }

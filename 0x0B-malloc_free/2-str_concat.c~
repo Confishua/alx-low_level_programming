@@ -1,0 +1,16 @@
+#include "main.h"
+char *str_concat(char *s1, char *s2)
+{
+char *str1;
+
+str1 = malloc(sizeof(s1) + sizeof(s2));
+str1[0] = s1;
+str1[1] = s2;
+str[0] = '\0';
+
+
+_putchar(s1);
+
+_putchar(s2);
+return (0);
+}
