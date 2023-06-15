@@ -4,17 +4,16 @@
  * @s: string
  * Return: length
  */
+
 int _strlen(char *s)
 {
-	int longi = 0;
-
-
-	while (*s != '\0')
-	{
-		longi++;
-		s++;
-	}
-
-
-	return (longi);
+int len = 0, i;
+for (i = 0; s[i]; i++)
+{
+if (s[i] != '\0')
+len += 1;
+else
+break;
+}
+return (len);
 }

@@ -1,31 +1,21 @@
-0-strcat.c
-
 #include "main.h"
+
 /**
-* _strcat - concatenates two strings
-* @dest: input value
-* @src: input value
-*
-* Return: void
-*/
+ *_strcat - return a concatinated strings of dest and src
+ * @dest: increase the memory location to accomodate src
+ * @src:append to dest
+ *Return: return the value of dest and src to the user
+ */
+
 char *_strcat(char *dest, char *src)
 {
-int i;
-int j;
+int i, j;
 
-i = 0;
-while (dest[i] != '\0')
-{
-i++;
-}
-j = 0;
-while (src[j] != '\0')
+for (i = 0; dest[i]; i++);
+for (j = 0; src[j]; j++)
 {
 dest[i] = src[j];
 i++;
-j++;
 }
-
-dest[i] = '\0';
 return (dest);
 }
