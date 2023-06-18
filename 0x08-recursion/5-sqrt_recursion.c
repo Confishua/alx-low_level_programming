@@ -6,15 +6,37 @@
 * Return: 0 0n success, -1 on error
 */
 
-int _sqrt_recursion(int n)
-{
-if (n % 2 != 0)
-{
-return (-1);
+
+int calculate_sqrt(int n, int start, int end);
+int _sqrt_recursion(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    }
+    if (n % 2 != 0)
+      {
+	return (-1);
+      }
+    else {
+        return calculate_sqrt(n, 0, n);
+    }
 }
-if (n % 2 == 0)
+
+int calculate_sqrt(int n, int start, int end)
 {
-_sqrt_recursion(_sqrt_recursion(n));
-}
-return (0);
+  int mid;
+  int square;
+    if (start > end) {
+        return end;
+    }
+
+   mid = (start + end) / 2;
+   square = mid * mid;
+
+    if (square == n) {
+        return mid;
+    } else if (square > n) {
+        return calculate_sqrt(n, start, mid - 1);
+    } else {
+        return calculate_sqrt(n, mid + 1, end);
+    }
 }
