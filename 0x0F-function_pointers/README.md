@@ -1,1 +1,1 @@
-a Readme on pointers to function
+This project contains several tasks on functions that take variable arguments. They are all Variadic functions
