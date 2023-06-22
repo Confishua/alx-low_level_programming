@@ -1,35 +1,50 @@
-
 #include <stdio.h>
+#include <stdbool.h>
 #include "variadic_functions.h"
 
 /**
-* print_strings - function to print string
-* @separator: take the character to seperate strings
-* @n: take the number of arguments to be passed
+* print_all - main entry
+*
+* @format: take in the format to print
 */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-unsigned int i;
+va_list vl;
 
-va_list albet;
+char *string;
+int i;
 
-va_start(albet, n);
-
-for (i = 0; i < n; i++)
+i = 0;
+va_start(vl, format);
+while (format != NULL && format[i] != '\0')
 {
-char *s;
-
-s = va_arg(albet, char *);
-
-if (s == NULL)
+switch (format[i])
+{
+case 'i':
+printf("%i", va_arg(vl, int));
+break;
+case 'f':
+printf("%f", va_arg(vl, double));
+break;
+case 'c':
+printf("%c", (char) va_arg(vl, int));
+break;
+case 's':
+string = va_arg(vl, char *);
+if (string == NULL)
+{
 printf("(nil)");
-else
-printf("%s", s);
-
-if (separator != NULL && i != (n - 1))
-printf("%s", separator);
+break;
+}
+printf("%s", string);
+break;
+}
+if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+format[i] == 's') && format[(i + 1)] != '\0')
+printf(", ");
+i++;
 }
 printf("\n");
-va_end(albet);
+va_end(vl);
 }
