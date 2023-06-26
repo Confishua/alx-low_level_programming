@@ -1,0 +1,1 @@
+This is a README.md on variable arguments. It focuses on how to use arguments passed to your program.
