@@ -7,18 +7,23 @@
 *Return: 1 on success or 0 if otherwise
 */
 
-
 int is_prime_number(int n)
 {
-if (n % n == 0)
-{
-return (1);
-if (n % 1 == 0)
-return (1);
-return (is_prime_number(n));
-}
-else
+  int i;
+  if (n <= 1)
 {
 return (0);
 }
+  i = 2;
+  if( i * i <= n)
+    {
+      i++;
+	}
+{
+if (n % i == 0)
+{
+return (0);
+}
+}
+return (1);
 }

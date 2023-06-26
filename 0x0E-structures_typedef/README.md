@@ -1,0 +1,1 @@
+aReadme on structure and types definitions
