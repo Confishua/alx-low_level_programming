@@ -32,7 +32,7 @@ new->next = *head;
 new->str = strdup(str);
 
 for (i = 0; str[i]; i++)
-		;
+;
 new->len = i;
 
 return (new);
