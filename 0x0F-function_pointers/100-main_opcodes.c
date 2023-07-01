@@ -1,28 +1,38 @@
 #include <stdio.h>
-#include "function_pointers.h"
-
+#include <stdlib.h>
 /**
-* print_opcodes - The main function to print opcodes
-*@start: the beginning
-*@end: the end location
-*Return: print Error for incorrect argument and exit with 1
+* main - program that prints the opcodes
+* @argc: arguments count
+* @argv: variable arguments
+*
+* Return: Always succsess
 */
-void print_opcodes(unsigned char *start, unsigned char *end)
+
+int main(int argc, char *argv[])
 {
-unsigned char *p = start;
-if (p < end)
+int bytes, index;
+int (*address)(int, char **) = main;
+unsigned char opcode;
+if (argc != 2)
 {
-p++;
-printf("%02x ", *p);
+printf("Error\n");
+exit(1);
+}
+bytes = atoi(argv[1]);
+if (bytes < 0)
+{
+printf("Error\n");
+exit(2);
+}
+for (index = 0; index < bytes; index++)
+{
+opcode = *(unsigned char *)address;
+printf("%.2x", opcode);
+if (index == bytes - 1)
+continue;
+printf(" ");
+address++;
 }
 printf("\n");
-}
-
-int main(void)
-{
-unsigned char *main_start = (unsigned char *)&main;
-unsigned char *main_end = (unsigned char *)&print_opcodes;
-print_opcodes(main_start, main_end);
-
 return (0);
 }
